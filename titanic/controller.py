@@ -1,7 +1,8 @@
 from titanic.model import TitanicModel
-
+from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import metrics
+import pandas as pd
 
 class TitanicController:
     def __init__(self):
@@ -48,6 +49,22 @@ class TitanicController:
         dummy = self.create_dummy()
         m = self._m
         m.hook_test(model, dummy)
+
+    def submit(self):
+        m = self._m
+        model = self.create_model()
+        dummy = self.create_dummy()
+        test = m.test
+        test_id = m.test_id
+
+        clf = SVC()
+        clf.fit(model, dummy)
+        prediction = clf.predict(test)
+        submission = pd.DataFrame(
+            {'PassengerId':test_id, 'Survived': prediction})
+        print(submission.head())
+        submission.to_csv(m.context+'submission.csv', index=False)
+
 
 
 

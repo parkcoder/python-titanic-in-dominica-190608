@@ -7,3 +7,4 @@ if __name__ == '__main__':
     # view = TitanicView()
     # t = view.create_train()
     # view.plot_pclass_sex(t)
+    ctrl.submit()

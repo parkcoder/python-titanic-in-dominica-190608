@@ -241,6 +241,14 @@ class TitanicModel:
         test_Y = test2[the_Y_features]
         return [train_X, train_Y, test_X, test_Y]
 
+    @staticmethod
+    def accuracy_by_dtree2(train_X, train_Y, test_X, test_Y) -> str:
+        tree_model = DecisionTreeClassifier()
+        tree_model.fit(train_X.values, train_Y.values)
+        dt_prediction = tree_model.predict(test_X)
+        accuracy = metrics.accuracy_score(dt_prediction, test_Y)
+        return accuracy
+
     """
       TEST ACCURACY
     """
@@ -251,7 +259,7 @@ class TitanicModel:
         X_features = ['Pclass', 'Sex', 'Embarked']
         Y_features = ['Survived']
         random_variables = self.create_random_variables(train, X_features, Y_features)
-        accuracy = self.accuracy_by_decision_tree(
+        accuracy = self.accuracy_by_dtree2(
             random_variables[0],
             random_variables[1],
             random_variables[2],
@@ -267,13 +275,7 @@ class TitanicModel:
         accuracy = round(np.mean(score)*100, 2)
         return accuracy
 
-    @staticmethod
-    def accuracy_by_decision_tree(train_X, train_Y, test_X, test_Y)-> str:
-        tree_model = DecisionTreeClassifier()
-        tree_model.fit(train_X.values, train_Y.values)
-        dt_prediction = tree_model.predict(test_X)
-        accuracy = metrics.accuracy_score(dt_prediction, test_Y)
-        return accuracy
+
 
     def accuracy_by_dtree(self, model, dummy) -> str:
         k_fold = self.create_k_fold()
@@ -313,7 +315,7 @@ class TitanicModel:
         model = train.drop('Survived', axis = 1)
         dummy = train['Survived']
         return [model, dummy]
-
+        
     
         
     @staticmethod

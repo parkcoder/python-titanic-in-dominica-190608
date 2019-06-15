@@ -1,5 +1,8 @@
 from titanic.model import TitanicModel
 
+from sklearn.tree import DecisionTreeClassifier
+from sklearn import metrics
+
 class TitanicController:
     def __init__(self):
         self._m = TitanicModel()
@@ -20,7 +23,6 @@ class TitanicController:
         # print('---------- test head & column -----------')
         # print(t2.head())
         # print(t2.columns)
-        print('---------- hook 메소드 시작 -----------')
         train = m.hook_process(t1, t2)
         # print('---------- 1 -----------')
         # print(train.column)
@@ -40,10 +42,12 @@ class TitanicController:
         dummy = train['Survived']
         return dummy
 
-    @staticmethod
-    def create_random_variables(train, X_feature, Y_features)->[]:
-        pass
 
+    def test_all(self):
+        model = self.create_model()
+        dummy = self.create_dummy()
+        m = self._m
+        m.hook_test(model, dummy)
 
 
 

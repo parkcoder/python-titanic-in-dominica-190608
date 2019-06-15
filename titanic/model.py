@@ -83,7 +83,8 @@ class TitanicModel:
         t = self.title_nominal(t[0], t[1])
         print('-------------4. Name, PassengerId 삭제------------')
         t = self.drop_feature(t[0], t[1], 'Name')
-        #
+        # test_id 가 있어야 sklearn 에서 테스트가 가능하다
+        self._test_id = test['PassengerId']
         t = self.drop_feature(t[0], t[1], 'PassengerId')
         print('-------------5. Age 편집------------')
         t = self.age_ordinal(t[0], t[1])
@@ -217,7 +218,7 @@ class TitanicModel:
     # 검증 알고리즘 작성
 
     def hook_test(self, model, dummy):
-        print('랜덤변수 활용한 검증 정확도 {} %'.format(self.accuracy_by_random_variables()))
+        # print('랜덤변수 활용한 검증 정확도 {} %'.format(self.accuracy_by_random_variables()))
         print('KNN 활용한 검증 정확도 {} %'.format(self.accuracy_by_knn(model, dummy)))
         print('결정트리 활용한 검증 정확도 {} %'.format(self.accuracy_by_dtree(model, dummy)))
         print('랜덤포레스트 활용한 검증 정확도 {} %'.format(self.accuracy_by_rforest(model, dummy)))
@@ -228,6 +229,17 @@ class TitanicModel:
     def create_k_fold():
         k_fold = KFold(n_splits=10, shuffle=True, random_state=0)
         return k_fold
+
+    @staticmethod
+    def create_random_variables(train, X_features, Y_features) -> []:
+        the_X_features = X_features
+        the_Y_features = Y_features
+        train2, test2 = train_test_split(train, test_size=0.3, random_state=0)
+        train_X = train2[the_X_features]
+        train_Y = train2[the_Y_features]
+        test_X = test2[the_X_features]
+        test_Y = test2[the_Y_features]
+        return [train_X, train_Y, test_X, test_Y]
 
     """
       TEST ACCURACY
@@ -302,16 +314,7 @@ class TitanicModel:
         dummy = train['Survived']
         return [model, dummy]
 
-    @staticmethod
-    def create_random_variables(train, X_features, Y_features) -> []:
-        the_X_features = X_features
-        the_Y_features = Y_features
-        train2, test2 = train_test_split(train, test_size=0.3, random_state=0)
-        train_X = train2[the_X_features]
-        train_Y = train2[the_Y_features]
-        test_X = test2[the_X_features]
-        test_Y = test2[the_Y_features]
-        return [train_X, train_Y, test_X, test_Y]
+    
         
     @staticmethod
     def accuracy_by_decision_tree(train_X, train_Y, test_X, test_Y)-> str:

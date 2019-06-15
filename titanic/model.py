@@ -73,6 +73,7 @@ class TitanicModel:
         file = self.new_file()
         return pd.read_csv(file)
 
+
     def hook_process(self, train, test) -> object:
         print('-------------1. Cabin, Ticket 삭제 ---------------')
         t = self.drop_feature(train, test, 'Cabin')

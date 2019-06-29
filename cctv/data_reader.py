@@ -1,5 +1,6 @@
 import pandas as pd
 import googlemaps
+import json
 
 class DataReader:
     def __init__(self):
@@ -38,3 +39,7 @@ class DataReader:
         gmaps = googlemaps.Client(key='...')
         # print(gmaps.geocode('서울중부경찰서', language='ko'))
         return gmaps
+
+    def json_load(self):
+        file = self.new_file()
+        return json.load(open(file, encoding='utf-8'))

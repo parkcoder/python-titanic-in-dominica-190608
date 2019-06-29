@@ -72,6 +72,7 @@ class PoliceNormModel:
         police_norm['범죄'] = np.sum(police_norm[crime_rate_columns], axis=1)
         police_norm['검거'] = np.sum(police_norm[crime_columns], axis=1)
         print(police_norm.columns)
+        police_norm.to_csv(self.dr.context+'saved/police_norm.csv', sep=',', encoding='utf-8')
 
 
 

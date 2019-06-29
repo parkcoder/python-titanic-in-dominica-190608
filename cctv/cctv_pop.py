@@ -6,7 +6,7 @@ class CCTVModel:
     def __init__(self):
         self.dr = DataReader()
 
-    def hook_process(self) -> object:
+    def hook(self) -> object:
         self.create_cctv_pop()
 
     def create_cctv_pop(self)->object:

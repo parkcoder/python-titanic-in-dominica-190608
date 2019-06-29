@@ -1,5 +1,5 @@
 import pandas as pd
-import numpy as np
+import googlemaps
 
 class DataReader:
     def __init__(self):
@@ -34,3 +34,7 @@ class DataReader:
         return pd.read_excel(file, encoding='UTF-8', header=header, usecols=usecols)
 
 
+    def create_gmaps(self):
+        gmaps = googlemaps.Client(key='...')
+        # print(gmaps.geocode('서울중부경찰서', language='ko'))
+        return gmaps

@@ -1,4 +1,4 @@
-from cctv.model import CCTVModel
+from cctv.cctv_pop import CCTVModel
 
 class CCTVController:
     def __init__(self):

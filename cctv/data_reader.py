@@ -36,7 +36,7 @@ class DataReader:
 
 
     def create_gmaps(self):
-        gmaps = googlemaps.Client(key='AIzaSyD9d1pZQ-vrq-Gx1kWc1t-zcgP21S2zaso')
+        gmaps = googlemaps.Client(key='...')
         # print(gmaps.geocode('서울중부경찰서', language='ko'))
         return gmaps
 

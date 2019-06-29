@@ -7,7 +7,7 @@ class DataReader:
         self._fname = None
 
     @property
-    def context(self) -> object:
+    def context(self) -> str:
         return self._context
 
     @context.setter
@@ -15,19 +15,19 @@ class DataReader:
         self._context = context
 
     @property
-    def fname(self) -> object:
+    def fname(self) -> str:
         return self._fname
 
     @fname.setter
     def fname(self, fname):
         self._fname = fname
 
-    def new_file(self) -> object:
+    def new_file(self) -> str:
         return self._context + self._fname
 
     def csv_to_dframe(self) -> object:
-        file = self.new_file()
-        return pd.read_csv(file, encoding='UTF-8')
+        file = self.new_file() # , 를 1000단위 숫자구분 글자로 인식
+        return pd.read_csv(file, encoding='UTF-8', thousands=',')
 
     def xls_to_dframe(self, header, usecols) -> object:
         file = self.new_file()

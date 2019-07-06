@@ -12,6 +12,14 @@ def hello_world():
     ctrl.create_table()
     return render_template('intro.html')
 
+@app.route("/cabbage", methods=['GET','POST'])
+def predict_cabbage():
+    # 컨트롤러가 가져온 값
+    result = 6000
+    render_params = {}
+    render_params['result'] = result
+    return render_template('cabbage.html', **render_params)
+
 @app.route("/login", methods=['POST'])
 def login():
     print('로그인 들어옴')

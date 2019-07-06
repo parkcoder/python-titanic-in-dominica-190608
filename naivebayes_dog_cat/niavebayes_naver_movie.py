@@ -10,7 +10,7 @@ class NaiveBayesClassfier:
 
     def load_corpus(self, path):
         # corpus : 말뭉치. 언어표본 집합. 형태소 분석
-        corpus = read_table(path, BaseException=',', encoding='UTF-8')
+        corpus = read_table(path, sep=',', encoding='UTF-8')
         corpus = np.array(corpus)
         return corpus
 
@@ -49,8 +49,8 @@ class NaiveBayesClassfier:
         for word, prob_if_class0, prob_if_class1 in word_probs:
             # 만약 리뷰에 word 가 나타나면 해당 단어가 나올 log 에 확률을 더해줌
             if word in docwords:
-                log_prob_if_class0 += math.log(log_prob_if_class0)
-                log_prob_if_class1 += math.log(log_prob_if_class1)
+                log_prob_if_class0 += math.log(prob_if_class0)
+                log_prob_if_class1 += math.log(prob_if_class1)
             # 만약 리뷰에 word 가 나타나지 않으면
             # 해당 단어가 나오지 않을 log 에 확률을 더해줌
             # 나오지 않을 확률은 log(1-나올확률)로 계산

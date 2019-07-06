@@ -2,12 +2,26 @@ from flask import Flask
 from flask import render_template, request, jsonify
 import re
 from calculator.controller import CalculatorController
+from members.controller import  MemberController
 
 app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return render_template('index.html')
+    ctrl = MemberController()
+    ctrl.create_table()
+    return render_template('intro.html')
+
+@app.route("/login", methods=['POST'])
+def login():
+    print('로그인 들어옴')
+    userid = request.form['userid']
+    password = request.form['password']
+    print('userid %s'%(userid))
+    print('password %s' % (password))
+    ctrl = MemberController()
+    view = ctrl.login(userid, password)
+    return render_template(view)
 
 @app.route("/move/<path>")
 def move(path):

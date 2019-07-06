@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="759d6498-9d83-4ff5-86a2-73566824c190" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/naivebayes_dog_cat/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flask190608.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flask190608.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naivebayes_dog_cat/data/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naivebayes_dog_cat/niavebayes_naver_movie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/naivebayes_dog_cat/word_frequence.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cabbage/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/cabbage/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naivebayes_dog_cat/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/naivebayes_dog_cat/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,15 +50,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cabbage/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tf_beta/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -72,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+              <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -92,10 +82,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="330">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/word_frequence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/niavebayes_naver_movie.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/cabbage/controller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -180,6 +194,8 @@
         <option value="$PROJECT_DIR$/tf_beta/__init__.py" />
         <option value="$PROJECT_DIR$/cabbage/controller.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/naivebayes_dog_cat/word_frequence.py" />
+        <option value="$PROJECT_DIR$/naivebayes_dog_cat/niavebayes_naver_movie.py" />
         <option value="$PROJECT_DIR$/naivebayes_dog_cat/__init__.py" />
       </list>
     </option>
@@ -225,7 +241,23 @@
             <path>
               <item name="flask190608" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask190608" type="462c0819:PsiDirectoryNode" />
+              <item name="naivebayes_dog_cat" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask190608" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask190608" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask190608" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask190608" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_beta" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask190608" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask190608" type="462c0819:PsiDirectoryNode" />
+              <item name="titanic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -241,11 +273,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ezen\PycharmProjects\flask190608\naivebayes_dog_cat\data" />
       <recent name="C:\Users\ezen\PycharmProjects\flask190608" />
       <recent name="C:\Users\ezen\PycharmProjects\flask190608\cabbage\data" />
       <recent name="C:\Users\ezen\PycharmProjects\flask190608\cctv\data" />
       <recent name="C:\Users\ezen\PycharmProjects\flask190608\cctv" />
-      <recent name="C:\Users\ezen\PycharmProjects\flask190608\cctv\data\saved" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -414,12 +446,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13593256" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1886196" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21149674" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5010846" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -756,7 +788,7 @@
     <entry file="file://$PROJECT_DIR$/cabbage/controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -776,7 +808,7 @@
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -817,12 +849,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/__init__.py">
+    <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/word_frequence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="300">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/niavebayes_naver_movie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/naivebayes_dog_cat/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
